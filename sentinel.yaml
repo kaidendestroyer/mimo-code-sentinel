@@ -1,0 +1,18 @@
+# mimo-code-sentinel configuration
+model: mimo-v2.5-pro
+api_base: https://api.mimo.ai/v1
+severity_threshold: medium
+max_file_size_kb: 500
+exclude_patterns:
+  - "*/test/*"
+  - "*/node_modules/*"
+  - "*.min.js"
+  - "*.pyc"
+  - "__pycache__/*"
+cwe_categories:
+  - "CWE-89"   # SQL Injection
+  - "CWE-79"   # XSS
+  - "CWE-78"   # Command Injection
+  - "CWE-22"   # Path Traversal
+  - "CWE-502"  # Unsafe Deserialization
+  - "CWE-798"  # Hardcoded Credentials
